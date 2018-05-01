@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pure JS Issue Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title has-text-centered">
+          Pure JS Issue Tracker
+        </h1>
+        <div class="columns is-centered">
+          <div id="issueInputForm"class="form-container column is-two-thirds is-narrow">
+            <div class="field">
+              <label for="issueDescInput"class="label">Description</label>
+                <div class="control">
+                  <input type="text" id="issueDescInput" class="input" placeholder="Describe your issue...">
+                </div>
+              </label>
+            </div>
+            <div class="field">
+              <label for="issueSeverityInput" class="label">Severity</label>
+                <div class="control is-expanded">
+                  <div class="select is-fullwidth">
+                    <select id="issueSeverityInput">
+                      <option>Low</option>
+                      <option>Medium</option>
+                      <option>High</option>
+                    </select>
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div class="field">
+              <label for="issueAssignedToInput" class="label">Responsible</label>
+                <div class="control">
+                  <input id="issueAssignedToInput" type="text" class="input" placeholder="Who is to blame?">
+                </div>
+              </label>
+            </div>
+            <button id="openIssue" class="button is-primary is-fullwidth">Open Issue</button>
+          </div> 
+        </div>
+      </div>
+      <div class="container">
+        <div class="columns is-centered">
+          <div id="issuesList" class="column is-two-thirds is-narrow"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="main.js"></script>
+  <script src="http://chancejs.com/chance.min.js"></script>
+</html>
